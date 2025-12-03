@@ -19,8 +19,10 @@ for line in result.stdout.split('\n')[1:]:  # Skip 'total' line
     parts = line.split()
     if len(parts) >= 9:
         filename = parts[-1]
-        # Skip directories and __pycache__
-        if filename != "__pycache__" and os.path.isfile(os.path.join(folder, filename)):
+        # Skip directories, __pycache__, and README files
+        if (filename != "__pycache__" and 
+            not filename.lower().startswith("readme") and 
+            os.path.isfile(os.path.join(folder, filename))):
             files_to_rename.append(filename)
 
 # Reverse to get oldest first
