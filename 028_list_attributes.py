@@ -1,0 +1,28 @@
+my_cart = ["apples","bananas","milk"]
+print(my_cart)
+my_cart.append("bread")
+print(my_cart)
+my_cart.insert(0,"ketchup")
+print(my_cart)
+my_cart.remove("bananas")
+print(my_cart)
+removed_item = my_cart.pop()
+print(removed_item)
+new_items = ["rice","butter"]
+my_cart.extend(new_items)
+print(my_cart)
+my_cart.sort()
+print(my_cart)
+my_cart.reverse()
+print(my_cart)
+n_list = ["juice","jam"]
+my_cart.extend(n_list)
+print(my_cart)
+my_cart.remove("juice")
+my_cart.remove("jam")
+# print(my_cart)
+your_cart = my_cart.copy()
+my_cart.extend(your_cart)
+print(my_cart)
+string = "tomato cucumber spinach"
+print(string.split())
